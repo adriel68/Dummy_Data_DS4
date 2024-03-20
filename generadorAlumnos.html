@@ -274,25 +274,27 @@
 
 <body>
 
-  Número de datos a generar:
-  <input type="number" id="NumRegistros" required/>
-  <select name="opcion" id="usuario">
-    <option value="alumno">
-      Alumnos
-    </option>
-
-    <option value="academicos">
-      Académicos
-    </option>
-
-    <option value="administrativos">
-    Administrativos
-    </option></select>
-  <br>
-  <input type="button" value="Generar en SQL" onclick="generarAlumnos()" />
-  <input type="button" value="Descargar archivo SQL" onclick="descargarSQL()">
-  <p id="salida"></p>
-
+  <div id="container">
+    <h1>Generador de Datos</h1>
+    <label for="NumRegistros">Número de datos a generar:</label>
+    <input type="number" id="NumRegistros" required />
+    <label for="usuario">Tipo de usuario:</label>
+    <select name="opcion" id="usuario">
+      <option value="alumno">
+        Alumnos
+      </option>
+      <option value="academicos">
+        Académicos
+      </option>
+      <option value="administrativos">
+        Administrativos
+      </option>
+    </select>
+    <br>
+    <button onclick="generarAlumnos()">Generar en SQL</button>
+    <button onclick="descargarSQL()">Descargar archivo SQL</button>
+    <p id="salida"></p>
+  </div>
 
 </body>
 
